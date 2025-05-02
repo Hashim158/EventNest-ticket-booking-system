@@ -31,7 +31,6 @@ function Sports() {
         );
 
       setEvents(sportsEvents);
-      //console.log(events)
     } catch (err) {
       console.error("Error fetching sports events:", err);
     }
