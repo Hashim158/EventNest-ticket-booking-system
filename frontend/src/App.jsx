@@ -12,7 +12,6 @@ import Workshop from "./Workshop";
 import Networking from "./Networking";
 import Exhibition from "./Exhibition";
 import UserProfile from "./UserProfile";
-import PurchaseTickets from "./PurchaseTickets";
 import MyTickets from "./MyTickets";
 import Favorites from "./Favorietes";
 import PaymentSuccess from "./PaymentSuccess";
@@ -34,7 +33,6 @@ function App() {
         <Route path="/networking" element={<Networking />} />
         <Route path="/exhibition" element={<Exhibition />} />
         <Route path="/user-profile" element={<UserProfile />} />
-        <Route path="/checkout" element={<PurchaseTickets />} />
         <Route path="/my-tickets" element={<MyTickets />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/payment-success" element={<PaymentSuccess />} />
