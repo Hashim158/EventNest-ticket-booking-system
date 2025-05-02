@@ -21,7 +21,6 @@ EventNest is a comprehensive event ticket booking platform designed to streamlin
 
 ### Frontend
 - React.js
-- Redux for state management
 - Tailwind CSS for styling
 - Axios for API requests
 
