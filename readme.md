@@ -47,13 +47,13 @@ EventNest is a comprehensive event ticket booking platform designed to streamlin
 
 2. **Install server dependencies**
    ```bash
-   cd server
+   cd backend
    npm install
    ```
 
 3. **Install client dependencies**
    ```bash
-   cd ../client
+   cd ../frontend
    npm install
    ```
 
@@ -69,45 +69,21 @@ EventNest is a comprehensive event ticket booking platform designed to streamlin
 
 5. **Start the server**
    ```bash
-   cd ../server
-   npm run dev
+   cd ../backend
+   npm start
    ```
 
 6. **Start the client**
    ```bash
-   cd ../client
-   npm start
+   cd ../frontend
+   npm run dev
    ```
 
 7. **Open your browser and navigate to:**
    ```
-   http://localhost:3000
+   http://localhost:5173
    ```
 
-## Project Structure
-
-```
-eventnest-ticket-booking-system/
-├── client/ - React frontend
-│   ├── public/
-│   ├── src/
-│   │   ├── components/ - Reusable UI components
-│   │   ├── context/ - React context for state management
-│   │   ├── pages/ - Page components
-│   │   ├── services/ - API service functions
-│   │   └── styles/ - CSS and styling files
-│   └── package.json
-│
-├── server/ - Node.js backend
-│   ├── controllers/ - Route controllers
-│   ├── middleware/ - Express middleware
-│   ├── models/ - MongoDB schema models
-│   ├── routes/ - API routes
-│   ├── utils/ - Utility functions
-│   └── package.json
-│
-└── README.md
-```
 
 ## API Endpoints
 
@@ -144,7 +120,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 
 - GitHub: [Hashim158](https://github.com/Hashim158)
-- Email: your-email@example.com
+- Email: hashim.siddque2002@gmail.com
 
 ## Acknowledgements
 
