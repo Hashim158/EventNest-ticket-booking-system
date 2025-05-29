@@ -3,6 +3,7 @@ const express = require('express');
 const path    = require('path');
 const app     = express();
 require('dotenv').config();
+console.log("MONGO URL:", process.env.mongoURL);
 const cors            = require('cors');
 const userRouter      = require('./routes/user.routes');
 const eventRouter     = require('./routes/event.routes');

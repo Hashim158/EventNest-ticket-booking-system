@@ -36,10 +36,9 @@ function Dashboard() {
   const fetchEvents = async () => {
     setIsLoading(true);
     setError(null);
-    // Reset search state when fetching all events
     setSearchQuery("");
     setSelectedCategory("all");
-    
+  
     try {
       const res = await fetch("http://localhost:9090/event/all", {
         headers: {
@@ -47,12 +46,27 @@ function Dashboard() {
           "Content-Type": "application/json",
         },
       });
+  
       if (!res.ok) throw new Error(res.statusText);
+  
       const fetchedEvents = await res.json();
-      fetchedEvents.sort((a, b) =>
-          new Date(a.date).getTime() - new Date(b.date).getTime()
-        );
-      setEvents(fetchedEvents);
+  
+      // Get today's date without time
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+  
+      // Filter out past events
+      const upcomingEvents = fetchedEvents.filter(event => {
+        const eventDate = new Date(event.date);
+        return eventDate >= today;
+      });
+  
+      // Sort by date
+      upcomingEvents.sort(
+        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+      );
+  
+      setEvents(upcomingEvents);
     } catch (err) {
       console.error("Error fetching events:", err);
       setError("Failed to load events. Please try again later.");
@@ -60,7 +74,7 @@ function Dashboard() {
       setIsLoading(false);
     }
   };
-
+  
   const handleSearch = async (e) => {
     e.preventDefault();
     setIsLoading(true);
