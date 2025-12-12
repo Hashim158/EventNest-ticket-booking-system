@@ -1,4 +1,4 @@
-# EventNest - Modern Event Ticket Booking System
+# EventNest - Modern Event Ticket Booking System integerated with Qodo
 
 ![EventNest Logo](https://github.com/Hashim158/EventNest-ticket-booking-system/raw/main/client/public/logo.png)
 
